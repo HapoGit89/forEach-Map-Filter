@@ -7,6 +7,11 @@ Examples:
 
 */
 function doubleValues(arr){
+ const dbarr = [];
+ arr.forEach(function(el){
+    dbarr.push(el*2)
+ })
+ return dbarr
     
 }
 
