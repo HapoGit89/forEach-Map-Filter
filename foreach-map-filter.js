@@ -61,6 +61,12 @@ Examples:
 
 */
 function addKeyAndValue(arr,key,value){
+ const newArray = arr;
+ newArray.forEach(function(el){
+    el.title = "instructor";
+ })
+ return newArray
+
     
 }
 
@@ -75,6 +81,21 @@ Examples:
     vowelCount('I Am awesome and so are you') // {i: 1, a: 4, e: 3, o: 3, u: 1};
 */
 function vowelCount(str){
+    const vc = {};
+    strarray = Array.from(str)
+    strarray.forEach(function(s){
+        let count = 0;
+        if("aeiou".includes(s)){
+        for (let i = 0; i < str.length; i++){
+            if(s.toLowerCase() === str[i].toLowerCase()){
+                count = count +1;   
+            }
+        }
+        vc[`${s}`]= count;
+
+}})
+
+    return vc
    
 }
 
