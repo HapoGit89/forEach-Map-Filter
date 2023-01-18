@@ -82,8 +82,8 @@ Examples:
 */
 function vowelCount(str){
     const vc = {};
-    strarray = Array.from(str)
-    strarray.forEach(function(s){
+    strArray = Array.from(str)
+    strArray.forEach(function(s){
         let count = 0;
         if("aeiou".includes(s)){
         for (let i = 0; i < str.length; i++){
@@ -92,11 +92,8 @@ function vowelCount(str){
             }
         }
         vc[`${s}`]= count;
-
 }})
-
-    return vc
-   
+ return vc 
 }
 
 /*
@@ -107,7 +104,11 @@ Examples:
     doubleValuesWithMap([1,-2,-3]) // [2,-4,-6]
 */
 
-function doubleValuesWithMap(arr) {}
+function doubleValuesWithMap(arr) {
+    return arr.map(function(el){
+        return el = el*2
+    })
+}
 
 /*
 Write a function called valTimesIndex which accepts an array and returns a new array with each value multiplied by the index it is currently at in the array.
@@ -118,6 +119,9 @@ Examples:
 */
 
 function valTimesIndex(arr){
+    return arr.map(function(el, i){
+        return el * i
+    })
     
 }
 
@@ -129,8 +133,11 @@ Examples:
 */
 
 function extractKey(arr, key){
-    
-}
+    return arr.map(function(el){
+        return el[`${key}`]
+    }
+   
+)}
 
 /*
 Write a function called extractFullName which accepts an array of objects and returns a new array with the value of the key with a name of "first" and the value of a key with the name of  "last" in each object, concatenated together with a space. 
@@ -140,6 +147,9 @@ Examples:
 */
 
 function extractFullName(arr){
+    return arr.map(function(el){
+      return `${el.first} ${el.last}`
+    })
     
 }
 
