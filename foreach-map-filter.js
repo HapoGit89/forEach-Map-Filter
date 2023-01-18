@@ -24,6 +24,12 @@ Examples:
 
 */
 function onlyEvenValues(arr){
+    const evenbarr = [];
+    arr.forEach(function(el){
+        if(el % 2 === 0){
+       evenbarr.push(el)}
+    })
+    return evenbarr
     
 }
 
@@ -36,6 +42,12 @@ Examples:
 
 */
 function showFirstAndLast(arr){
+    const firstlastarr = []
+    arr.forEach(function(el){
+        firstlastarr.push(el[0]+ el[el.length -1])
+
+    })
+    return firstlastarr
     
 }
 
