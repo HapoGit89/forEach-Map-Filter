@@ -214,7 +214,7 @@ function removeVowels(str) {
     })
     let result = ''
     filteredsarr.forEach(function(c){
-        result = result + `${c}`
+        result = result + c.toLowerCase()
     })
      return result
     }
